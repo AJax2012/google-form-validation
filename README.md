@@ -1,5 +1,6 @@
 # google-form-validate-with-sheet
 **Very little coding experience required**
+
 validate google form entries with google sheets
 
 If you are looking for a way to validate a string submission in google forms using Google SpreadSheets as your "database," this is a good place to start. This script will compare a form submission to a google sheet and email the user whether their submission was valid or invalid, even if their response has capitals or spaces before or after the word.
