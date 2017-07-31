@@ -54,14 +54,14 @@ function sendEmail(valid, email, month, url, submission) {
     MailApp.sendEmail(email,
                       "CLE Affidavit - Appellate & ICAP Decisions Case Law Update",
                       '?',{
-                      htmlBody: "<p>Thank you for attending "+ month + "'s webinar!  Please click <a href='" + url + "'><strong>here</strong></a> for a copy of your record. If you have any issues, please reply to this email.</p><p>Thank you ,<br/>AJax2012</p>",
+                      htmlBody: Utilities.formatString("<p>Thank you for attending $s's webinar!  Please click <a href='%s'><strong>here</strong></a> for a copy of your record. If you have any issues, please reply to this email.</p><p>Thank you ,<br/>AJax2012</p>", month, url),
                       });
   } else {
     // INCORRECT RESPONSE - send email with original submission and link to form to try again
     MailApp.sendEmail(email,
                       "CLE Affidavit - Appellate & ICAP Decisions Case Law Update",
                       '?', {
-                        htmlBody: "<p>Thank you for attending our webinar!  Your code submission was <strong>" + submission + "</strong>. This code is incorrect and you will not recieve credit for this submission. If you have any questions, please reply to this email.</p><p>If you would like to resubmit your response, please click <a href='LINK TO FORM HERE'>here</a>.</p><p>Thank you,<br/>AJax2012</p>"
+                        htmlBody: Utilities.formatString("<p>Thank you for attending our webinar!  Your code submission was <strong>%s</strong>. This code is incorrect and you will not recieve credit for this submission. If you have any questions, please reply to this email.</p><p>If you would like to resubmit your response, please click <a href='LINK TO FORM HERE'>here</a>.</p><p>Thank you,<br/>AJax2012</p>", submission),
                       });
   }
 }
