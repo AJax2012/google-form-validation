@@ -1,4 +1,4 @@
-# google-form-validate-with-sheet
+# Validate a Google Form with Google Sheets
 **Very little coding experience required**
 
 validate google form entries with google sheets
